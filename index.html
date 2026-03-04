@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleShop — Inicio</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+    <!-- Aquí va todo el contenido -->
+        <header class="header">
+            <div class="header__greeting">
+                <img src="storage/img/avatar.jpg" alt="Foto de perfil" class="header__avatar">
+                <div class="header__text">
+                    <span class="header__label">Hola, bienvenida 👋</span>
+                    <h1 class="header__name">María García</h1>
+                </div>
+            </div>
+            <button class="header__notification" aria-label="Notificaciones">
+        <!-- Ícono de campana (SVG o imagen) -->
+            </button>
+        </header>
+        <section class="search">
+            <div class="search__wrapper">
+    <!-- Ícono de lupa -->
+                <input
+                type="text"
+                class="search__input"
+                placeholder="Buscar ropa, categorías..."
+                >
+                <button class="search__filter">
+        <!-- Ícono de filtro -->
+                </button>
+        </section>
+        <section class="categories">
+            <div class="section-header">
+                <h2 class="section-header__title">Categorías</h2>
+                <a href="#" class="section-header__link">Ver todo</a>
+            </div>
+            <div class="categories__scroll">
+                <a href="#" class="category-chip category-chip--active">
+                <span class="category-chip__icon">👗</span>
+                <span class="category-chip__label">Vestidos</span>
+                </a>
+                <a href="#" class="category-chip">
+                <span class="category-chip__icon">👕</span>
+                <span class="category-chip__label">Camisetas</span>
+                </a>
+                <a href="#" class="category-chip">
+                <span class="category-chip__icon">👖</span>
+                <span class="category-chip__label">Vaqueros</span>
+                </a>
+                <!-- Más categorías según tu Figma -->
+            </div>
+        </section>
+        <section class="products">
+            <div class="section-header">
+                <h2 class="section-header__title">Destacados</h2>
+                <a href="#" class="section-header__link">Ver todo</a>
+            </div>
+            <div class="products__grid">
+
+                <a href="views/detail.html" class="product-card">
+                <div class="product-card__image-wrapper">
+                    <img src="storage/img/producto1.jpg" alt="Vestido Floral" class="product-card__image">
+                    <button class="product-card__fav" aria-label="Añadir a favoritos">
+                    <!-- Ícono corazón SVG -->
+                    </button>
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Vestido Floral</h3>
+                    <span class="product-card__category">Vestidos</span>
+                    <div class="product-card__footer">
+                        <span class="product-card__price">$89.990</span>
+                        <div class="product-card__rating">
+                            <!-- Ícono estrella -->
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Repite para cada producto -->
+            </div>
+        </section>
+        <nav class="bottom-nav">
+            <a href="index.html" class="bottom-nav__item bottom-nav__item--active">
+                <!-- Ícono home -->
+                <span>Inicio</span>
+            </a>
+            <a href="views/checkout.html" class="bottom-nav__item">
+                <!-- Ícono carrito -->
+                <span>Carrito</span>
+                <span class="bottom-nav__badge">3</span>
+            </a>
+            <a href="#" class="bottom-nav__item">
+                <!-- Ícono corazón -->
+                <span>Favoritos</span>
+            </a>
+            <a href="#" class="bottom-nav__item">
+                <!-- Ícono persona -->
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
