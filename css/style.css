@@ -331,7 +331,6 @@ button {
 .navItem img {
   width: 22px;
   height: 22px;
-  opacity: 0.3;
   transition: var(--transition);
 }
 
