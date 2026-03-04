@@ -1,0 +1,556 @@
+/* ============================================
+   checkout.css - Página de Checkout
+   ============================================
+   Fiel al diseño Figma de Nam Design
+   ============================================ */
+
+/* --- RESET --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fontFamily);
+  background-color: var(--colorWhite);
+  color: var(--color01);
+  line-height: 1.4;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--fontFamily);
+  cursor: pointer;
+}
+
+
+/* ============================================
+   HEADER
+   Figma: < (atrás)   "Checkout"   ≡ (hamburguesa)
+   ============================================ */
+
+.checkoutHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp16) var(--sp24);
+  background-color: var(--colorWhite);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Botón atrás */
+.backBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.backBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Título "Checkout" */
+.checkoutTitle {
+  font-size: var(--fs18);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+}
+
+/* Botón hamburguesa - Figma: 2 líneas (= icon) */
+.menuBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menuLine {
+  height: 2px;
+  background-color: var(--color01);
+  border-radius: 1px;
+  transition: var(--transition);
+}
+
+.menuLine:nth-child(1) {
+  width: 22px;
+}
+
+.menuLine:nth-child(2) {
+  width: 16px;
+}
+
+
+/* ============================================
+   CONTENIDO PRINCIPAL
+   ============================================ */
+
+.checkoutContent {
+  max-width: var(--maxW);
+  margin: 0 auto;
+  padding: var(--sp8) var(--sp24);
+  padding-bottom: 120px;
+}
+
+
+/* ============================================
+   TARJETA DE PRODUCTO EN CARRITO
+   Figma: Imagen circular/redondeada, título,
+   categoría, precio, selector cantidad, menú (...)
+   ============================================ */
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: var(--sp14);
+  padding: var(--sp14) 0;
+  border-bottom: 1px solid var(--color04);
+}
+
+/* Imagen del producto (cuadrada redondeada) */
+.cartItemImage {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius12);
+  overflow: hidden;
+  background-color: var(--color04);
+  flex-shrink: 0;
+}
+
+.cartItemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info del producto */
+.cartItemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Fila: título + menú (...) */
+.cartItemTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp8);
+  margin-bottom: 2px;
+}
+
+.cartItemTitle {
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  color: var(--color01);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Botón de tres puntos (...) */
+.cartItemMenu {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: var(--color03);
+  font-size: var(--fs16);
+  letter-spacing: 2px;
+}
+
+.cartItemMenu img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
+}
+
+.cartItemCategory {
+  font-size: var(--fs12);
+  color: var(--color03);
+  margin-bottom: var(--sp6);
+}
+
+/* Fila: precio + selector cantidad */
+.cartItemBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartItemPrice {
+  font-size: var(--fs16);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+}
+
+/* Selector cantidad en carrito */
+.cartQty {
+  display: flex;
+  align-items: center;
+  gap: var(--sp12);
+}
+
+.cartQtyBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radiusFull);
+  border: 1px solid var(--colorBorder);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: var(--fs14);
+  color: var(--color01);
+  font-family: var(--fontFamily);
+}
+
+.cartQtyBtn img {
+  width: 12px;
+  height: 12px;
+}
+
+.cartQtyBtn:hover {
+  border-color: var(--color01);
+}
+
+.cartQtyNum {
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  min-width: 14px;
+  text-align: center;
+}
+
+
+/* ============================================
+   SHIPPING INFORMATION
+   Figma: Título "Shipping Information",
+   Tarjeta VISA con número oculto y dropdown.
+   ============================================ */
+
+.shippingSection {
+  margin-top: var(--sp24);
+  margin-bottom: var(--sp24);
+}
+
+.sectionLabel {
+  font-size: var(--fs16);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+  margin-bottom: var(--sp14);
+}
+
+/* Tarjeta de pago (VISA) */
+.paymentCard {
+  display: flex;
+  align-items: center;
+  gap: var(--sp12);
+  background-color: var(--color04);
+  border-radius: var(--radius12);
+  padding: var(--sp12) var(--sp16);
+}
+
+/* Badge "VISA" */
+.visaBadge {
+  background-color: var(--colorVisa);
+  color: var(--colorWhite);
+  font-size: var(--fs10);
+  font-weight: var(--fwBold);
+  padding: 4px 8px;
+  border-radius: var(--radius8);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.visaBadge img {
+  height: 14px;
+  width: auto;
+}
+
+/* Número oculto "**** **** **** 2143" */
+.paymentNumber {
+  flex: 1;
+  font-size: var(--fs14);
+  color: var(--color02);
+  font-weight: var(--fwMedium);
+  letter-spacing: 1px;
+}
+
+/* Flecha dropdown */
+.paymentDropdown {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paymentDropdown img {
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+}
+
+
+/* ============================================
+   RESUMEN DE COMPRA
+   Figma: Filas con label y valor alineados.
+   Total (9 Items), Shipping Fee, Discount, Sub Total
+   ============================================ */
+
+.checkoutSummary {
+  padding-top: var(--sp20);
+  border-top: 1px solid var(--color04);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp6) 0;
+}
+
+.summaryLabel {
+  font-size: var(--fs14);
+  color: var(--color02);
+  font-weight: var(--fwRegular);
+}
+
+.summaryValue {
+  font-size: var(--fs14);
+  font-weight: var(--fwMedium);
+  color: var(--color01);
+}
+
+/* Separador antes del subtotal */
+.summaryDivider {
+  border: none;
+  border-top: 1px solid var(--color04);
+  margin: var(--sp12) 0;
+}
+
+/* Fila del Sub Total = más grande */
+.summaryRow--total .summaryLabel {
+  font-size: var(--fs16);
+  font-weight: var(--fwSemiBold);
+  color: var(--color01);
+}
+
+.summaryRow--total .summaryValue {
+  font-size: var(--fs18);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+}
+
+
+/* ============================================
+   BOTÓN "PAY"
+   Figma: Barra oscura redondeada, texto "Pay"
+   ============================================ */
+
+.payBtnWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--sp16) var(--sp24);
+  background: linear-gradient(transparent, var(--colorWhite) 30%);
+  z-index: 50;
+}
+
+.payBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--maxW);
+  margin: 0 auto;
+  padding: var(--sp16);
+  background-color: var(--color05);
+  color: var(--colorWhite);
+  border: none;
+  border-radius: var(--radiusPill);
+  font-size: var(--fs16);
+  font-weight: var(--fwSemiBold);
+  font-family: var(--fontFamily);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.payBtn:hover {
+  background-color: var(--color01);
+}
+
+
+/* ============================================
+   MODAL DE CONFIRMACIÓN
+   ============================================ */
+
+.confirmModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 17, 17, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  padding: var(--sp24);
+}
+
+.confirmModal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.confirmModalContent {
+  background-color: var(--colorWhite);
+  border-radius: var(--radius24);
+  padding: var(--sp40) var(--sp32);
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.confirmModal:target .confirmModalContent {
+  transform: scale(1);
+}
+
+.confirmIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radiusFull);
+  background-color: var(--color04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--sp20);
+}
+
+.confirmIcon img {
+  width: 32px;
+  height: 32px;
+}
+
+.confirmTitle {
+  font-size: var(--fs20);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+  margin-bottom: var(--sp10);
+}
+
+.confirmText {
+  font-size: var(--fs14);
+  color: var(--color02);
+  line-height: 1.6;
+  margin-bottom: var(--sp24);
+}
+
+.confirmBtn {
+  display: inline-block;
+  padding: var(--sp14) var(--sp40);
+  background-color: var(--color05);
+  color: var(--colorWhite);
+  border-radius: var(--radiusPill);
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  transition: var(--transition);
+}
+
+.confirmBtn:hover {
+  background-color: var(--color01);
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 768px) {
+  .checkoutContent {
+    max-width: 580px;
+  }
+
+  .checkoutHeader {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .cartItemImage {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .checkoutContent {
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--sp40);
+    align-items: start;
+    padding-bottom: var(--sp40);
+  }
+
+  .checkoutHeader {
+    max-width: 820px;
+  }
+
+  .payBtnWrap {
+    position: relative;
+    padding: 0;
+    background: none;
+    margin-top: var(--sp20);
+  }
+
+  .cartItemsSection {
+    order: 1;
+  }
+
+  .checkoutSidebar {
+    order: 2;
+    position: sticky;
+    top: 80px;
+  }
+}

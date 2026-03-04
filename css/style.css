@@ -1,4 +1,10 @@
-/* ===== RESET Y BASE ===== */
+/* ============================================
+   style.css - Página de Inicio (index.html)
+   ============================================
+   Fiel al diseño Figma de Nam Design
+   ============================================ */
+
+/* --- RESET --- */
 *,
 *::before,
 *::after {
@@ -8,11 +14,12 @@
 }
 
 body {
-  font-family: var(--font-family);
-  font-weight: var(--fw-regular);
-  color: var(--color5);
-  background-color: var(--color4);
-  line-height: 1.5;
+  font-family: var(--fontFamily);
+  background-color: var(--colorWhite);
+  color: var(--color01);
+  line-height: 1.4;
+  min-height: 100vh;
+  padding-bottom: calc(var(--navbarH) + var(--sp24));
   -webkit-font-smoothing: antialiased;
 }
 
@@ -21,342 +28,374 @@ a {
   color: inherit;
 }
 
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-
 img {
-  display: block;
   max-width: 100%;
+  display: block;
 }
 
-input {
-  font-family: inherit;
-  border: none;
-  outline: none;
+button {
+  font-family: var(--fontFamily);
+  cursor: pointer;
 }
 
-/* ===== APP CONTAINER ===== */
-
-.app-container {
-  max-width: 430px;
+/* --- CONTENEDOR PRINCIPAL --- */
+.appContainer {
+  max-width: var(--maxW);
   margin: 0 auto;
-  min-height: 100vh;
-  background-color: #FFFFFF;
-  position: relative;
+  padding: 0 var(--sp24);
 }
 
-/* ===== HEADER ===== */
+
+/* ============================================
+   HEADER
+   ============================================ */
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: var(--space-24) var(--space-24) var(--space-12);
-}
-
-.header__greeting {
-  display: flex;
   align-items: center;
-  gap: var(--space-12);
+  padding-top: var(--sp32);
+  padding-bottom: var(--sp20);
 }
 
-.header__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
-  object-fit: cover;
-}
-
-.header__label {
-  display: block;
-  font-size: var(--fs-sm);
-  color: var(--color2);
-}
-
-.header__name {
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-bold);
-  color: var(--color5);
-}
-
-.header__notification {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-md);
-  color: var(--color5);
-}
-
-/* ===== BÚSQUEDA ===== */
-
-.search {
-  padding: var(--space-8) var(--space-24) var(--space-16);
-}
-
-.search__wrapper {
-  display: flex;
-  align-items: center;
-  gap: var(--space-12);
-  background-color: var(--color4);
-  border-radius: var(--radius-lg);
-  padding: var(--space-12) var(--space-16);
-}
-
-.search__input {
-  flex: 1;
-  background: none;
-  font-size: var(--fs-base);
-  color: var(--color5);
-}
-
-.search__input::placeholder {
-  color: var(--color3);
-}
-
-.search__filter {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color1);
-  color: #FFFFFF;
-  border-radius: var(--radius-sm);
-}
-
-/* ===== SECTION HEADER (reutilizable) ===== */
-
-.section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--space-24);
-  margin-bottom: var(--space-16);
-}
-
-.section-header__title {
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-bold);
-}
-
-.section-header__link {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
-  color: var(--color1);
-}
-
-/* ===== CATEGORÍAS ===== */
-
-.categories {
-  padding-bottom: var(--space-24);
-}
-
-.categories__scroll {
-  display: flex;
-  gap: var(--space-12);
-  padding: 0 var(--space-24);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.categories__scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.category-chip {
-  display: flex;
-  align-items: center;
-  gap: var(--space-8);
-  padding: var(--space-8) var(--space-16);
-  background-color: var(--color4);
-  border-radius: 20px;
-  white-space: nowrap;
-  border: 1.5px solid transparent;
-}
-
-.category-chip--active {
-  background-color: var(--color1);
-  color: #FFFFFF;
-}
-
-.category-chip__label {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
-}
-
-/* ===== PRODUCTOS ===== */
-
-.products {
-  padding-bottom: var(--space-24);
-}
-
-.products__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-16);
-  padding: 0 var(--space-24);
-}
-
-/* ===== PRODUCT CARD ===== */
-
-.product-card {
+.headerGreeting {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
 }
 
-.product-card__image-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
+/* "Hello, Welcome 👋" */
+.greetingLabel {
+  font-size: var(--fs14);
+  color: var(--color02);
+  font-weight: var(--fwRegular);
+  margin-bottom: 2px;
 }
 
-.product-card__image {
+/* Nombre del usuario: "Albert Stevano" */
+.greetingName {
+  font-size: var(--fs24);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+  letter-spacing: -0.01em;
+}
+
+/* Avatar circular */
+.profileAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radiusFull);
+  background-color: var(--color04);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profileAvatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.product-card__fav {
+
+/* ============================================
+   BARRA DE BÚSQUEDA
+   Figma: Fondo gris claro, bordes redondeados,
+   ícono lupa a la izquierda.
+   ============================================ */
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: var(--color04);
+  border-radius: var(--radius12);
+  padding: var(--sp12) var(--sp16);
+  margin-bottom: var(--sp24);
+  gap: var(--sp10);
+  height: 48px;
+}
+
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: var(--fontFamily);
+  font-size: var(--fs14);
+  color: var(--color01);
+  background: transparent;
+  font-weight: var(--fwRegular);
+}
+
+.searchInput::placeholder {
+  color: var(--color03);
+}
+
+
+/* ============================================
+   CATEGORÍAS
+   Figma: Chips pill con ícono + texto.
+   Chip activo = fondo oscuro #121111, texto blanco.
+   Chips inactivos = fondo #F2F2F2, texto oscuro.
+   ============================================ */
+
+.categoriesScroll {
+  display: flex;
+  gap: var(--sp10);
+  overflow-x: auto;
+  padding-bottom: var(--sp24);
+  scrollbar-width: none;
+}
+
+.categoriesScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Chip base */
+.categoryChip {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp8);
+  padding: var(--sp10) var(--sp20);
+  border-radius: var(--radiusPill);
+  font-size: var(--fs13);
+  font-weight: var(--fwMedium);
+  transition: var(--transition);
+  white-space: nowrap;
+  border: none;
+  /* Inactivo por defecto */
+  background-color: var(--color04);
+  color: var(--color02);
+}
+
+/* Ícono dentro del chip */
+.categoryChip img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Chip ACTIVO = oscuro */
+.categoryChip--active {
+  background-color: var(--color05);
+  color: var(--colorWhite);
+}
+
+.categoryChip:hover {
+  opacity: 0.85;
+}
+
+
+/* ============================================
+   GRID DE PRODUCTOS
+   Figma: 2 columnas, tarjetas con imagen grande,
+   bordes redondeados, info debajo.
+   ============================================ */
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp16);
+}
+
+
+/* ============================================
+   TARJETA DE PRODUCTO
+   ============================================ */
+
+.productCard {
+  display: block;
+  border-radius: var(--radius16);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.productCard:hover {
+  transform: translateY(-2px);
+}
+
+/* Contenedor de imagen */
+.productImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius16);
+  overflow: hidden;
+  background-color: var(--color04);
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botón favorito (corazón) - esquina sup derecha */
+.favoriteBtn {
   position: absolute;
-  top: var(--space-8);
-  right: var(--space-8);
-  width: 32px;
-  height: 32px;
+  top: var(--sp10);
+  right: var(--sp10);
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFFFFF;
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-card);
-  color: var(--color3);
 }
 
-.product-card__info {
-  padding: var(--space-12);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+.favoriteBtn img {
+  width: 18px;
+  height: 18px;
 }
 
-.product-card__title {
-  font-size: var(--fs-base);
-  font-weight: var(--fw-semibold);
+/* Info debajo de la imagen */
+.productInfo {
+  padding: var(--sp10) var(--sp4) var(--sp8);
 }
 
-.product-card__category {
-  font-size: var(--fs-xs);
-  color: var(--color2);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+/* Nombre del producto - "Modern Light Clothes" */
+.productTitle {
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  color: var(--color01);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.product-card__footer {
+/* Categoría - "T-Shirt" */
+.productCategory {
+  font-size: var(--fs12);
+  color: var(--color03);
+  margin-bottom: var(--sp6);
+}
+
+/* Fila precio + rating */
+.productMeta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--space-4);
 }
 
-.product-card__price {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-bold);
-  color: var(--color1);
+/* Precio "$212.99" */
+.productPrice {
+  font-size: var(--fs16);
+  font-weight: var(--fwBold);
+  color: var(--color01);
 }
 
-.product-card__rating {
+/* Rating "★ 5.0" */
+.productRating {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  color: var(--color2);
+  gap: 4px;
+  font-size: var(--fs12);
+  color: var(--color02);
 }
 
-/* ===== NAV SPACER ===== */
-
-.nav-spacer {
-  height: 80px;
+.productRating img {
+  width: 12px;
+  height: 12px;
 }
 
-/* ===== BOTTOM NAV ===== */
 
-.bottom-nav {
+/* ============================================
+   NAVBAR INFERIOR
+   Figma: Fondo blanco, 4 íconos centrados,
+   ícono activo = oscuro, inactivo = gris claro.
+   ============================================ */
+
+.navbarMobile {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 430px;
+  left: 0;
+  right: 0;
+  height: var(--navbarH);
+  background-color: var(--colorWhite);
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  height: 64px;
-  background-color: #FFFFFF;
-  border-top: 1px solid var(--color4);
+  align-items: center;
+  border-top: 1px solid var(--color04);
   z-index: 100;
 }
 
-.bottom-nav__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
-  color: var(--color3);
-  position: relative;
-}
-
-.bottom-nav__item--active {
-  color: var(--color1);
-}
-
-.bottom-nav__badge {
-  position: absolute;
-  top: 2px;
-  right: 4px;
-  min-width: 16px;
-  height: 16px;
+.navItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color1);
-  color: #FFFFFF;
-  font-size: 9px;
-  font-weight: var(--fw-bold);
-  border-radius: var(--radius-full);
+  padding: var(--sp10);
+  transition: var(--transition);
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 320px) {
-  .header,
-  .search,
-  .section-header,
-  .categories__scroll,
-  .products__grid {
-    padding-left: var(--space-16);
-    padding-right: var(--space-16);
-  }
+.navItem img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.3;
+  transition: var(--transition);
 }
 
-@media (min-width: 600px) {
-  .app-container {
-    max-width: 600px;
+/* Ícono activo */
+.navItem--active img {
+  opacity: 1;
+}
+
+
+/* ============================================
+   RESPONSIVE - TABLET (768px+)
+   ============================================ */
+
+@media (min-width: 768px) {
+  .appContainer {
+    max-width: 720px;
   }
 
-  .products__grid {
+  .productsGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp20);
+  }
+
+  .header {
+    padding-top: var(--sp48);
+  }
+
+  .greetingName {
+    font-size: 1.75rem;
+  }
+
+  .profileAvatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .searchBar {
+    height: 52px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - DESKTOP (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  .appContainer {
+    max-width: 960px;
+  }
+
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .navbarMobile {
+    max-width: 430px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--radius20) var(--radius20) 0 0;
+    border-top: none;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
   }
 }

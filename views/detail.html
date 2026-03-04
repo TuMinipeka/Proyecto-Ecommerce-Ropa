@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Dress Bless - StyleVibe</title>
+
+  <!-- Fuente: Encode Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+
+  <!-- ============================================
+       LAYOUT (en tablet+ será 2 columnas)
+       ============================================ -->
+  <div class="detailLayout">
+
+    <!-- ============================================
+         IMAGEN PRINCIPAL
+         Figma: Imagen grande con botones < y ♥
+         flotando arriba.
+         ============================================ -->
+    <div class="productHero">
+
+      <!-- Barra flotante -->
+      <div class="topBar">
+        <!-- Botón ATRÁS -->
+        <a href="../index.html" class="topBarBtn" aria-label="Volver">
+          <!-- ÍCONO: storage/img/icons/arrow-left.svg -->
+          <img src="../storage/img/icons/arrow-left.svg" alt="Atrás">
+        </a>
+
+        <!-- Botón FAVORITO (corazón relleno = ya es favorito) -->
+        <a href="#" class="topBarBtn" aria-label="Favorito">
+          <img src="../storage/img/icons/heart-filled.svg" alt="Favorito">
+        </a>
+      </div>
+
+      <!-- Imagen del producto
+           IMAGEN LOCAL: storage/img/products/light-dress-bless.jpg -->
+      <img
+        src="../storage/img/products/light-dress-bless.jpg"
+        alt="Light Dress Bless"
+        class="productImage"
+      >
+    </div>
+
+
+    <!-- ============================================
+         PANEL DE INFORMACIÓN
+         ============================================ -->
+    <div class="detailPanel">
+
+      <!-- === Título del producto === -->
+      <!-- Figma: "Light Dress Bless" -->
+      <h1 class="detailTitle">Light Dress Bless</h1>
+
+      <!-- === Rating + Reviews === -->
+      <!-- Figma: ★ 5.0 (7,932 reviews) -->
+      <div class="detailRatingRow">
+        <img src="../storage/img/icons/star.svg" alt="★" class="detailStar">
+        <span class="detailRatingNum">5.0</span>
+        <span class="detailReviews">(7,932 reviews)</span>
+      </div>
+
+      <!-- === Selector de Cantidad === -->
+      <!-- Figma: — 1 + alineado a la derecha -->
+      <div class="quantityRow">
+        <div></div>
+        <div class="quantitySelector">
+          <span class="qtyBtn" aria-label="Reducir">
+            <img src="../storage/img/icons/minus.svg" alt="−">
+          </span>
+          <span class="qtyNumber">1</span>
+          <span class="qtyBtn" aria-label="Aumentar">
+            <img src="../storage/img/icons/plus.svg" alt="+">
+          </span>
+        </div>
+      </div>
+
+      <!-- Separador -->
+      <hr class="detailDivider">
+
+      <!-- === Descripción === -->
+      <!-- Figma: Texto de descripción + "Read More..." en bold -->
+      <p class="detailDescription">
+        Its simple and elegant shape makes it perfect for
+        those of you who like you who want minimalist
+        clothes. <a href="#modalDescription" class="readMoreLink">Read More. . .</a>
+      </p>
+
+      <!-- Separador -->
+      <hr class="detailDivider">
+
+
+      <!-- ============================================
+           CHOOSE SIZE + COLOR
+           Figma: En la misma fila, "Choose Size" a la
+           izquierda y "Color" a la derecha.
+           ============================================ -->
+      <div class="selectorRow">
+
+        <!-- Tallas -->
+        <div class="selectorGroup">
+          <p class="selectorLabel">Choose Size</p>
+          <div class="sizeSelector">
+            <span class="sizeOption">S</span>
+            <span class="sizeOption">M</span>
+            <!-- L está seleccionada en el Figma -->
+            <span class="sizeOption sizeOption--active">L</span>
+            <span class="sizeOption">XL</span>
+          </div>
+        </div>
+
+        <!-- Colores -->
+        <div class="selectorGroup">
+          <p class="selectorLabel">Color</p>
+          <div class="colorSelector">
+            <!-- Figma: 3 círculos — gris, oscuro, negro -->
+            <span class="colorOption colorOption--gray"
+                  aria-label="Gris"></span>
+            <span class="colorOption colorOption--dark colorOption--active"
+                  aria-label="Oscuro"></span>
+            <span class="colorOption colorOption--black"
+                  aria-label="Negro"></span>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- Fin detailPanel -->
+  </div><!-- Fin detailLayout -->
+
+
+  <!-- ============================================
+       BOTÓN "ADD TO CART"
+       Figma: Barra oscura redondeada pill.
+       "🛒 Add to Cart | $100.99 $190.99"
+       ============================================ -->
+  <div class="buyButtonWrap">
+    <a href="checkout.html" class="buyButton">
+      <!-- ÍCONO: storage/img/icons/cart-white.svg -->
+      <img src="../storage/img/icons/cart-white.svg" alt="">
+      <span>Add to Cart</span>
+      <span>|</span>
+      <span class="buyBtnPrice">$100.99</span>
+      <span class="buyBtnOldPrice">$190.99</span>
+    </a>
+  </div>
+
+
+  <!-- ============================================
+       MODAL "READ MORE"
+       Se activa con CSS :target al hacer clic en
+       "Read More..."
+       ============================================ -->
+  <div id="modalDescription" class="modal">
+    <div class="modalContent">
+      <div class="modalHandle"></div>
+
+      <h2 class="modalTitle">Product Description</h2>
+
+      <p class="modalText">
+        Its simple and elegant shape makes it perfect for
+        those of you who like you who want minimalist
+        clothes. The fabric is soft, breathable and
+        comfortable for all-day wear.
+      </p>
+
+      <p class="modalText">
+        Made from premium quality cotton blend material,
+        this dress features a flattering silhouette that
+        suits various body types. The minimalist design
+        makes it easy to pair with different accessories
+        and shoes.
+      </p>
+
+      <p class="modalText">
+        Care instructions: Machine wash cold, tumble dry
+        low. Do not bleach. Iron on low heat.
+      </p>
+
+      <a href="#" class="modalClose">Close</a>
+    </div>
+  </div>
+
+</body>
+</html>

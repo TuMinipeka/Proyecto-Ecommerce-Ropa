@@ -1,69 +1,81 @@
+/* ============================================
+   variables.css - Variables del Proyecto
+   ============================================
+   Colores extraídos directamente del Figma:
+   01 #292526  |  02 #787676  |  03 #A3A1A2
+   04 #F2F2F2  |  05 #121111
+   Tipografía: Encode Sans
+   ============================================ */
+
 :root {
-    --color1: #293526;
-    --color2: #787676;
-    --color3: #A3A1A2;
-    --color4: #f2f2f2;
-    --color5: #121111;
+  /* --- Paleta de Colores del Figma --- */
+  --color01: #292526;          /* Textos principales, headers */
+  --color02: #787676;          /* Textos secundarios, subtítulos */
+  --color03: #A3A1A2;          /* Textos terciarios, placeholders */
+  --color04: #F2F2F2;          /* Fondos claros, cards */
+  --color05: #121111;          /* Botones principales, navbar, acentos fuertes */
 
-    /* Tipografía */
-    --font-family: 'Encode Sans', sans-serif;
-    --fw-regular: 400;
-    --fw-medium: 500;
-    --fw-semibold: 600;
-    --fw-bold: 700;
+  /* --- Colores Semánticos --- */
+  --colorWhite: #FFFFFF;
+  --colorBlack: #000000;
+  --colorStar: #E4A70A;        /* Estrella de rating (dorado/amarillo) */
+  --colorHeart: #292526;        /* Corazón favorito */
+  --colorBorder: #E5E5E5;      /* Bordes sutiles */
+  --colorBg: #FAFAFA;          /* Fondo general de la app */
+  --colorVisa: #1A1F71;        /* Azul Visa */
 
-    /* Tamaños de fuente (ajusta según tu Figma) */
-    --fs-xs: 0.625rem;
-    --fs-sm: 0.75rem;
-    --fs-base: 0.875rem;
-    --fs-md: 1rem;
-    --fs-lg: 1.125rem;
-    --fs-xl: 1.25rem;
-    --fs-2xl: 1.5rem;
+  /* --- Tipografía --- */
+  --fontFamily: 'Encode Sans', 'Segoe UI', sans-serif;
+  --fs10: 0.625rem;            /* 10px */
+  --fs11: 0.6875rem;           /* 11px */
+  --fs12: 0.75rem;             /* 12px */
+  --fs13: 0.8125rem;           /* 13px */
+  --fs14: 0.875rem;            /* 14px */
+  --fs16: 1rem;                /* 16px */
+  --fs18: 1.125rem;            /* 18px */
+  --fs20: 1.25rem;             /* 20px */
+  --fs22: 1.375rem;            /* 22px */
+  --fs24: 1.5rem;              /* 24px */
 
-    /* Espaciado */
-    --space-4: 0.25rem;
-    --space-8: 0.5rem;
-    --space-12: 0.75rem;
-    --space-16: 1rem;
-    --space-24: 1.5rem;
-    --space-32: 2rem;
+  /* --- Pesos --- */
+  --fwRegular: 400;
+  --fwMedium: 500;
+  --fwSemiBold: 600;
+  --fwBold: 700;
 
-    /* Bordes */
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-full: 50%;
+  /* --- Espaciado --- */
+  --sp4: 4px;
+  --sp6: 6px;
+  --sp8: 8px;
+  --sp10: 10px;
+  --sp12: 12px;
+  --sp14: 14px;
+  --sp16: 16px;
+  --sp20: 20px;
+  --sp24: 24px;
+  --sp32: 32px;
+  --sp40: 40px;
+  --sp48: 48px;
 
-    /* Sombras */
-    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.05);
-}
+  /* --- Bordes --- */
+  --radius8: 8px;
+  --radius10: 10px;
+  --radius12: 12px;
+  --radius16: 16px;
+  --radius20: 20px;
+  --radius24: 24px;
+  --radiusFull: 50%;
+  --radiusPill: 100px;
 
+  /* --- Sombras --- */
+  --shadowSoft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadowCard: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadowStrong: 0 8px 24px rgba(0, 0, 0, 0.10);
 
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../storage/font/encode_sans/EncodeSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
+  /* --- Transiciones --- */
+  --transition: 0.25s ease;
 
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../storage/font/encode_sans/EncodeSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../storage/font/encode_sans/EncodeSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../storage/font/encode_sans/EncodeSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  /* --- Layout --- */
+  --navbarH: 60px;
+  --maxW: 430px;               /* Ancho máximo mobile */
 }

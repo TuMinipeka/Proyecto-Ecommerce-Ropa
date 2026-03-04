@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleVibe - E-commerce de Ropa</title>
+
+  <!-- Fuente: Encode Sans (del Figma) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="appContainer">
+    <header class="header">
+      <div class="headerGreeting">
+        <span class="greetingLabel">Hello, Welcome 👋</span>
+        <h1 class="greetingName">Albert Stevano</h1>
+      </div>
+
+      <!-- IMAGEN LOCAL: storage/img/avatars/avatar.jpg -->
+      <div class="profileAvatar">
+        <img src="storage/img/avatars/avatar.jpg" alt="Albert Stevano">
+      </div>
+    </header>
+
+
+    <!-- ============================================
+         BÚSQUEDA
+         Figma: Fondo gris #F2F2F2, placeholder
+         "Search clothes..."
+         ============================================ -->
+    <div class="searchBar">
+      <!-- ÍCONO: storage/img/icons/search.svg -->
+      <img src="storage/img/icons/search.svg" alt="" class="searchIcon">
+      <input
+        type="text"
+        class="searchInput"
+        placeholder="Search clothes..."
+        aria-label="Buscar ropa"
+      >
+    </div>
+
+
+    <!-- ============================================
+         CATEGORÍAS
+         Figma: "All Items" (activo/oscuro),
+         "Dress", "T-Shirt", etc.
+         ============================================ -->
+    <div class="categoriesScroll">
+      <!-- Chip activo = fondo #121111 -->
+      <a href="#" class="categoryChip categoryChip--active">
+        <!-- ÍCONO: storage/img/icons/category-all.svg -->
+        <img src="storage/img/icons/category-all.svg" alt="">
+        All Items
+      </a>
+
+      <a href="#" class="categoryChip">
+        <!-- ÍCONO: storage/img/icons/category-dress.svg -->
+        <img src="storage/img/icons/category-dress.svg" alt="">
+        Dress
+      </a>
+
+      <a href="#" class="categoryChip">
+        <img src="storage/img/icons/category-tshirt.svg" alt="">
+        T-Shirt
+      </a>
+
+      <a href="#" class="categoryChip">
+        <img src="storage/img/icons/category-pants.svg" alt="">
+        Pants
+      </a>
+    </div>
+
+
+    <!-- ============================================
+         GRID DE PRODUCTOS
+         Figma: 2 columnas, 4 productos visibles
+         ============================================ -->
+    <div class="productsGrid">
+
+      <!-- ========== PRODUCTO 1 ========== -->
+      <!-- Figma: "Modern Light Clothes" / T-Shirt / $212.99 / ★ 5.0 -->
+      <a href="views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <!-- IMAGEN: storage/img/products/modern-light-1.jpg -->
+          <img
+            src="storage/img/products/modern-light-1.jpg"
+            alt="Modern Light Clothes"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="storage/img/icons/heart-outline.svg" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Modern Light Clothes</h3>
+          <p class="productCategory">T-Shirt</p>
+          <div class="productMeta">
+            <span class="productPrice">$212.99</span>
+            <span class="productRating">
+              <img src="storage/img/icons/star.svg" alt="★">
+              5.0
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 2 ========== -->
+      <!-- Figma: "Light Dress Bless" / Dress modern / $162.99 / ★ 5.0 -->
+      <a href="views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="storage/img/products/light-dress-bless.jpg"
+            alt="Light Dress Bless"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="storage/img/icons/heart-outline.svg" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Light Dress Bless</h3>
+          <p class="productCategory">Dress modern</p>
+          <div class="productMeta">
+            <span class="productPrice">$162.99</span>
+            <span class="productRating">
+              <img src="storage/img/icons/star.svg" alt="★">
+              5.0
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 3 ========== -->
+      <a href="views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="storage/img/products/modern-light-2.jpg"
+            alt="Modern Light Clothes"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="storage/img/icons/heart-outline.svg" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Modern Light Clothes</h3>
+          <p class="productCategory">Dress modern</p>
+          <div class="productMeta">
+            <span class="productPrice">$145.00</span>
+            <span class="productRating">
+              <img src="storage/img/icons/star.svg" alt="★">
+              4.9
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 4 ========== -->
+      <a href="views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="storage/img/products/elegant-style.jpg"
+            alt="Elegant Style"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="storage/img/icons/heart-outline.svg" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Elegant Style</h3>
+          <p class="productCategory">T-Shirt</p>
+          <div class="productMeta">
+            <span class="productPrice">$190.99</span>
+            <span class="productRating">
+              <img src="storage/img/icons/star.svg" alt="★">
+              5.0
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 5 ========== -->
+      <a href="views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="storage/img/products/casual-wear.jpg"
+            alt="Casual Wear"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="storage/img/icons/heart-outline.svg" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Casual Wear</h3>
+          <p class="productCategory">T-Shirt</p>
+          <div class="productMeta">
+            <span class="productPrice">$124.50</span>
+            <span class="productRating">
+              <img src="storage/img/icons/star.svg" alt="★">
+              4.8
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 6 ========== -->
+      <a href="views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="storage/img/products/street-fashion.jpg"
+            alt="Street Fashion"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="storage/img/icons/heart-outline.svg" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Street Fashion</h3>
+          <p class="productCategory">Dress modern</p>
+          <div class="productMeta">
+            <span class="productPrice">$178.00</span>
+            <span class="productRating">
+              <img src="storage/img/icons/star.svg" alt="★">
+              4.7
+            </span>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- Fin productsGrid -->
+
+  </div><!-- Fin appContainer -->
+
+
+  <!-- ============================================
+       NAVBAR INFERIOR
+       Figma: 4 íconos — home, bag, heart, profile
+       Home está activo (oscuro), resto gris.
+       ============================================ -->
+  <nav class="navbarMobile">
+    <a href="index.html" class="navItem navItem--active" aria-label="Inicio">
+      <!-- ÍCONO: storage/img/icons/nav-home.svg -->
+      <img src="storage/img/icons/nav-home.svg" alt="Home">
+    </a>
+
+    <a href="views/checkout.html" class="navItem" aria-label="Carrito">
+      <img src="storage/img/icons/nav-bag.svg" alt="Bag">
+    </a>
+
+    <a href="#" class="navItem" aria-label="Favoritos">
+      <img src="storage/img/icons/nav-heart.svg" alt="Favorites">
+    </a>
+
+    <a href="#" class="navItem" aria-label="Perfil">
+      <img src="storage/img/icons/nav-profile.svg" alt="Profile">
+    </a>
+  </nav>
+
+</body>
+</html>
