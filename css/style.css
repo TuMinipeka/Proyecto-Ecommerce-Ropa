@@ -1,8 +1,3 @@
-/* ============================================
-   style.css - Página de Inicio (index.html)
-   ============================================
-   Fiel al diseño Figma de Nam Design
-   ============================================ */
 
 /* --- RESET --- */
 *,
@@ -316,11 +311,12 @@ button {
   left: 0;
   right: 0;
   height: var(--navbarH);
-  background-color: var(--colorWhite);
+  background-color: var(--color05);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid var(--color04);
+  border-radius: 50px;
+  border-top: 1px;
   z-index: 100;
 }
 
@@ -391,10 +387,11 @@ button {
   }
 
   .navbarMobile {
+    background-color: var(--color05);
     max-width: 430px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: var(--radius20) var(--radius20) 0 0;
+    border-radius: 50px;
     border-top: none;
     box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
   }
