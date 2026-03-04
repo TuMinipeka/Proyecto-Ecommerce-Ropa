@@ -224,12 +224,6 @@ img {
 }
 
 
-/* ============================================
-   CHOOSE SIZE
-   Figma: Label "Choose Size", círculos con
-   letras S M L XL. Seleccionado = fondo oscuro.
-   ============================================ */
-
 .selectorRow {
   display: flex;
   align-items: flex-start;
