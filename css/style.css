@@ -109,6 +109,7 @@ button {
   align-items: center;
   background-color: var(--color04);
   border-radius: var(--radius12);
+  border: 0.5px solid var(--color03);
   padding: var(--sp12) var(--sp16);
   gap: var(--sp10);
   height: 48px;
@@ -132,6 +133,7 @@ button {
 
 .filterBtn:hover {
   background-color: var(--color01);
+  transform:translateY(-2px) ;
 }
 
 /* Ícono de filtro (blanco para contraste con fondo oscuro) */
@@ -274,11 +276,19 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
+}
+
+.favoriteBtn:hover {
+  transform: translateY(-2px);
 }
 
 .favoriteBtn img {
-  width: 18px;
-  height: 18px;
+  background-color: var(--color05);
+  padding: 5px;
+  border-radius: 15px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Info debajo de la imagen */
