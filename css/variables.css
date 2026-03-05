@@ -1,14 +1,4 @@
-/* ============================================
-   variables.css - Variables del Proyecto
-   ============================================
-   Colores extraídos directamente del Figma:
-   01 #292526  |  02 #787676  |  03 #A3A1A2
-   04 #F2F2F2  |  05 #121111
-   Tipografía: Encode Sans
-   ============================================ */
-
 :root {
-  /* --- Paleta de Colores del Figma --- */
   --color01: #292526;          /* Textos principales, headers */
   --color02: #787676;          /* Textos secundarios, subtítulos */
   --color03: #A3A1A2;          /* Textos terciarios, placeholders */
@@ -26,16 +16,16 @@
 
   /* --- Tipografía --- */
   --fontFamily: 'Encode Sans', 'Segoe UI', sans-serif;
-  --fs10: 0.625rem;            /* 10px */
-  --fs11: 0.6875rem;           /* 11px */
-  --fs12: 0.75rem;             /* 12px */
-  --fs13: 0.8125rem;           /* 13px */
-  --fs14: 0.875rem;            /* 14px */
-  --fs16: 1rem;                /* 16px */
-  --fs18: 1.125rem;            /* 18px */
-  --fs20: 1.25rem;             /* 20px */
-  --fs22: 1.375rem;            /* 22px */
-  --fs24: 1.5rem;              /* 24px */
+  --fs10: 0.625rem;           
+  --fs11: 0.6875rem;         
+  --fs12: 0.75rem;             
+  --fs13: 0.8125rem;         
+  --fs14: 0.875rem;           
+  --fs16: 1rem;               
+  --fs18: 1.125rem;           
+  --fs20: 1.25rem;             
+  --fs22: 1.375rem;           
+  --fs24: 1.5rem;              
 
   /* --- Pesos --- */
   --fwRegular: 400;

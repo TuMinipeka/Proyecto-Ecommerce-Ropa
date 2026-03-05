@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StyleVibe - E-commerce de Ropa</title>
-
-  <!-- Fuente: Encode Sans (del Figma) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
@@ -28,28 +24,28 @@
     </header>
 
 
-    <!-- ============================================
-         BÚSQUEDA
-         Figma: Fondo gris #F2F2F2, placeholder
-         "Search clothes..."
-         ============================================ -->
-    <div class="searchBar">
-      <!-- ÍCONO: storage/img/icons/search.svg -->
-      <img src="storage/img/icons/lupa.png" alt="lupa" class="searchIcon">
-      <input
-        type="text"
-        class="searchInput"
-        placeholder="Search clothes..."
-        aria-label="Buscar ropa"
-      >
-    </div>
+    <!-- Contenedor que pone la barra y el botón lado a lado -->
+<div class="searchRow">
+
+  <!-- Barra de búsqueda (solo lupa + input) -->
+  <div class="searchBar">
+    <img src="storage/img/icons/lupa.png" alt="lupa" class="searchIcon">
+    <input
+      type="text"
+      class="searchInput"
+      placeholder="Search clothes..."
+      aria-label="Buscar ropa"
+    >
+  </div>
+
+  <!-- Botón de filtro SEPARADO (cuadrado oscuro) -->
+  <div class="filterBtn">
+    <img src="storage/img/icons/multimedia.png" alt="Filtros">
+  </div>
+
+</div>
 
 
-    <!-- ============================================
-         CATEGORÍAS
-         Figma: "All Items" (activo/oscuro),
-         "Dress", "T-Shirt", etc.
-         ============================================ -->
     <div class="categoriesScroll">
       <!-- Chip activo = fondo #121111 -->
       <a href="#" class="categoryChip categoryChip--active">
@@ -83,10 +79,8 @@
     <div class="productsGrid">
 
       <!-- ========== PRODUCTO 1 ========== -->
-      <!-- Figma: "Modern Light Clothes" / T-Shirt / $212.99 / ★ 5.0 -->
       <a href="views/detail.html" class="productCard">
         <div class="productImageWrap">
-          <!-- IMAGEN: storage/img/products/modern-light-1.jpg -->
           <img
             src="storage/img/products/Product1.png"
             alt="Modern Light Clothes"
