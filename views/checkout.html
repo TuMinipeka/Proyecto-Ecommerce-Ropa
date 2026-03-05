@@ -11,6 +11,10 @@
 </head>
 <body>
 
+  <!-- ============================================
+       HEADER
+       Figma: <   "Checkout"   ≡
+       ============================================ -->
   <header class="checkoutHeader">
     <!-- Botón ATRÁS -->
     <a href="detail.html" class="backBtn" aria-label="Volver">
@@ -20,35 +24,32 @@
     <!-- Título -->
     <h1 class="checkoutTitle">Checkout</h1>
 
-    <!-- Menú hamburguesa (2 líneas como en el Figma) -->
-    <button class="menuBtn" aria-label="Menú">
+    <!-- Botón hamburguesa: abre el menú -->
+    <a href="#mobileMenu" class="menuBtn" aria-label="Abrir menú">
       <span class="menuLine"></span>
       <span class="menuLine"></span>
-    </button>
+    </a>
   </header>
 
 
   <!-- ============================================
-      CONTENIDO PRINCIPAL
-      ============================================ -->
+       CONTENIDO PRINCIPAL
+       ============================================ -->
   <main class="checkoutContent">
 
     <!-- =====================
-        COLUMNA: Productos
-        ===================== -->
+         COLUMNA: Productos
+         ===================== -->
     <div class="cartItemsSection">
 
       <!-- ========== PRODUCTO 1 ========== -->
-      <!-- Figma: "Modern light clothes" / $212.99 / qty: 4 -->
       <div class="cartItem">
         <div class="cartItemImage">
-          <!-- IMAGEN: storage/img/products/modern-light-1.jpg -->
           <img src="../storage/img/products/Product1.png" alt="Modern light clothes">
         </div>
         <div class="cartItemInfo">
           <div class="cartItemTop">
             <h3 class="cartItemTitle">Modern light clothes</h3>
-            <!-- Menú tres puntos (...) -->
             <button class="cartItemMenu" aria-label="Opciones">
               <img src="../storage/img/icons/tres.png" alt="...">
             </button>
@@ -70,7 +71,6 @@
       </div>
 
       <!-- ========== PRODUCTO 2 ========== -->
-      <!-- Figma: "Modern light clothes" / Dress modern / $162.99 / qty: 1 -->
       <div class="cartItem">
         <div class="cartItemImage">
           <img src="../storage/img/products/Product2.png" alt="Modern light clothes">
@@ -102,76 +102,49 @@
 
 
     <!-- =====================
-        COLUMNA: Resumen y Pago
-      ===================== -->
+         COLUMNA: Resumen y Pago
+         ===================== -->
     <div class="checkoutSidebar">
 
-      <!-- ============================================
-           SHIPPING INFORMATION
-           Figma: Tarjeta VISA con número oculto
-           ============================================ -->
+      <!-- SHIPPING INFORMATION -->
       <div class="shippingSection">
         <p class="sectionLabel">Shipping Information</p>
 
         <div class="paymentCard">
-          <!-- Badge VISA -->
-          <span class="visaBadge">
-            <!-- ÍCONO: storage/img/icons/visa.svg o texto -->
-            VISA
-          </span>
-
-          <!-- Número oculto -->
+          <span class="visaBadge">VISA</span>
           <span class="paymentNumber">**** **** **** 2143</span>
-
-          <!-- Flecha dropdown -->
           <span class="paymentDropdown">
             <img src="../storage/img/icons/under.png" alt="▼">
           </span>
         </div>
       </div>
 
-
-      <!-- ============================================
-           RESUMEN DE COMPRA
-           Figma: Total (9 Items), Shipping, Discount,
-           Sub Total con línea separadora.
-           ============================================ -->
+      <!-- RESUMEN DE COMPRA -->
       <div class="checkoutSummary">
-
-        <!-- Total de items -->
         <div class="summaryRow">
           <span class="summaryLabel">Total (9 Items)</span>
           <span class="summaryValue">$1,014.95</span>
         </div>
 
-        <!-- Shipping Fee -->
         <div class="summaryRow">
           <span class="summaryLabel">Shipping Fee</span>
           <span class="summaryValue">$0.00</span>
         </div>
 
-        <!-- Discount -->
         <div class="summaryRow">
           <span class="summaryLabel">Discount</span>
           <span class="summaryValue">$0.00</span>
         </div>
 
-        <!-- Separador punteado -->
         <hr class="summaryDivider">
 
-        <!-- Sub Total -->
         <div class="summaryRow summaryRow--total">
           <span class="summaryLabel">Sub Total</span>
           <span class="summaryValue">$1,014.95</span>
         </div>
-
       </div>
 
-
-      <!-- ============================================
-           BOTÓN "PAY"
-           Figma: Barra oscura redondeada, texto "Pay"
-           ============================================ -->
+      <!-- BOTÓN PAY -->
       <div class="payBtnWrap">
         <a href="#confirmPurchase" class="payBtn">
           Pay
@@ -183,13 +156,50 @@
 
 
   <!-- ============================================
+       MENÚ MÓVIL HAMBURGUESA
+       Se abre con CSS :target al hacer clic en ≡
+       ============================================ -->
+  <div id="mobileMenu" class="mobileMenu">
+    <!-- Fondo oscuro: al hacer clic cierra el menú -->
+    <a href="#" class="mobileMenuOverlay" aria-label="Cerrar menú"></a>
+
+    <!-- Panel lateral del menú -->
+    <nav class="mobileMenuPanel">
+      <!-- Header del menú -->
+      <div class="mobileMenuHeader">
+        <span class="mobileMenuTitle">Menú</span>
+        <a href="#" class="mobileMenuClose" aria-label="Cerrar">✕</a>
+      </div>
+
+      <!-- Links de navegación -->
+      <a href="../index.html" class="mobileMenuItem">
+        <img src="../storage/img/icons/home2.png" alt="">
+        <span>Home</span>
+      </a>
+
+      <a href="../views/checkout.html" class="mobileMenuItem mobileMenuItem--active">
+        <img src="../storage/img/icons/bag2.png" alt="">
+        <span>Cart</span>
+      </a>
+
+      <a href="#" class="mobileMenuItem">
+        <img src="../storage/img/icons/corazon.png" alt="">
+        <span>Favorites</span>
+      </a>
+
+      <a href="#" class="mobileMenuItem">
+        <img src="../storage/img/icons/profile2.png" alt="">
+        <span>Profile</span>
+      </a>
+    </nav>
+  </div>
+
+
+  <!-- ============================================
        MODAL DE CONFIRMACIÓN
-       Se activa con :target al hacer clic en "Pay"
        ============================================ -->
   <div id="confirmPurchase" class="confirmModal">
     <div class="confirmModalContent">
-
-      <!-- Ícono de check -->
       <div class="confirmIcon">
         <img src="../storage/img/icons/chulo-Photoroom.png" alt="✓">
       </div>
