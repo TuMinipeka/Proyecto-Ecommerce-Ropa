@@ -42,10 +42,11 @@ img {
   z-index: 10;
 }
 
-.topBarBtnF:hover {
-  transform: translateY(-2px);
-  content: url("../storage/img/icons/heart.png");
-  border-radius: 50%;
+.topBarBtnF img:hover {
+  content: url("../storage/img/icons/corazon.png");
+  border-radius:50%;
+  width: 30px;
+  height: 30px;
 }
 
 /* Botón circular transparente con ícono */
