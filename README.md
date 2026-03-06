@@ -37,6 +37,7 @@ app_de_ecommerce_de_ropa/
 │   ├── font/
 │   │   └── encode_sans/   # Fuente tipográfica del proyecto
 │   └── img/               # Imágenes de productos y assets visuales
+│   │   └── icons/
 │   │   └── products/
 ├── views/
 │   ├── detail.html        # Página de detalle del producto
