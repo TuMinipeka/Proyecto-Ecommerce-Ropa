@@ -42,6 +42,12 @@ img {
   z-index: 10;
 }
 
+.topBarBtn:hover {
+  transform: translateY(-2px);
+  content: url("../storage/img/icons/heart.png");
+  border-radius: 50%;
+}
+
 /* Botón circular transparente con ícono */
 .topBarBtn {
   width: 40px;
@@ -63,9 +69,7 @@ img {
   height: 25px;
 }
 
-.topBarBtn:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-}
+
 
 
 /* ============================================
