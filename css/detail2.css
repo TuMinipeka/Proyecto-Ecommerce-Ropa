@@ -1,0 +1,498 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fontFamily);
+  background-color: var(--colorWhite);
+  color: var(--color01);
+  line-height: 1.4;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ============================================
+   TOP BAR - Botones flotantes
+   ============================================ */
+
+.topBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp20) var(--sp24);
+  z-index: 10;
+}
+
+/* Botón circular transparente con ícono */
+.topBarBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radiusFull);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  /* Fondo semitransparente para legibilidad */
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.topBarBtn img {
+  width: 25px;
+  height: 25px;
+}
+
+.topBarBtn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ============================================
+   IMAGEN PRINCIPAL
+   Figma: Imagen ocupa la mitad superior aprox
+   ============================================ */
+
+.productHero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: 58vh;
+  background-color: var(--color04);
+  overflow: hidden;
+}
+
+.productHero .productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ============================================
+   PANEL DE INFORMACIÓN
+   Figma: Panel blanco con bordes redondeados
+   arriba, se superpone sobre la imagen.
+   ============================================ */
+
+.detailPanel {
+  position: relative;
+  margin-top: -28px;
+  background-color: var(--colorWhite);
+  border-radius: var(--radius24) var(--radius24) 0 0;
+  padding: var(--sp32) var(--sp24);
+  padding-bottom: 110px;
+  min-height: 46vh;
+}
+
+/* === Título: "Light Dress Bless" === */
+.detailTitle {
+  font-size: var(--fs22);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+  margin-bottom: var(--sp8);
+}
+
+/* === Rating + Reviews === */
+.detailRatingRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp8);
+  margin-bottom: var(--sp20);
+}
+
+.detailStar {
+  width: 16px;
+  height: 16px;
+}
+
+.detailRatingNum {
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  color: var(--color01);
+}
+
+.detailReviews {
+  font-size: var(--fs13);
+  color: var(--colorBlue);
+}
+
+/* === Selector de Cantidad: - 1 + === */
+.quantityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp20);
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  gap: var(--sp16);
+}
+
+/* Botones + y - (círculos con borde) */
+.qtyBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radiusFull);
+  border: 1.5px solid var(--color03);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--color01);
+  font-size: var(--fs18);
+  font-family: var(--fontFamily);
+}
+
+.qtyBtn:hover {
+  border-color: var(--color01);
+}
+
+.qtyBtn img {
+  width: 14px;
+  height: 14px;
+}
+
+.qtyNumber {
+  font-size: var(--fs18);
+  font-weight: var(--fwSemiBold);
+  color: var(--color01);
+  min-width: 20px;
+  text-align: center;
+}
+
+
+/* === Descripción del producto === */
+.detailDescription {
+  font-size: var(--fs14);
+  color: var(--color02);
+  line-height: 1.7;
+  margin-bottom: var(--sp4);
+}
+
+/* "Read More..." link */
+.readMoreLink {
+  font-size: var(--fs14);
+  font-weight: var(--fwBold);
+  color: var(--color01);
+  cursor: pointer;
+  display: inline;
+}
+
+.readMoreLink:hover {
+  text-decoration: underline;
+}
+
+
+/* === Separador === */
+.detailDivider {
+  border: none;
+  border-top: 1px solid var(--color04);
+  margin: var(--sp20) 0;
+}
+
+
+.selectorRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp24);
+}
+
+.selectorGroup {
+  flex: 1;
+}
+
+.selectorLabel {
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  color: var(--color01);
+  margin-bottom: var(--sp12);
+}
+
+.sizeSelector {
+  display: flex;
+  gap: var(--sp10);
+}
+
+/* Cada opción de talla = círculo */
+.sizeOption {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radiusFull);
+  border: 1px solid var(--colorBorder);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs13);
+  font-weight: var(--fwMedium);
+  color: var(--color02);
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+.sizeOption:hover {
+  border-color: var(--color01);
+  color: var(--color01);
+}
+
+/* Talla seleccionada = fondo oscuro, texto blanco */
+.sizeOption--active {
+  background-color: var(--color05);
+  border-color: var(--color05);
+  color: var(--colorWhite);
+}
+
+
+/* ============================================
+   COLOR SELECTOR
+   Figma: Círculos de color sólido.
+   Seleccionado = borde exterior.
+   ============================================ */
+
+.colorSelector {
+  display: flex;
+  gap: var(--sp10);
+}
+
+.colorOption {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radiusFull);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.colorOption:hover {
+  outline-color: var(--colorBorder);
+}
+
+/* Color seleccionado */
+.colorOption--active {
+  outline-color: var(--color01);
+}
+
+/* Colores del Figma */
+.colorOption--gray   { background-color: #A3A1A2; }
+.colorOption--dark   { background-color: #292526; }
+.colorOption--black  { background-color: #121111; }
+
+
+/* ============================================
+   BOTÓN "ADD TO CART"
+   Figma: Barra oscura redondeada, texto blanco,
+   precio + precio tachado.
+   ============================================ */
+
+.buyButtonWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--sp16) var(--sp24);
+  background: linear-gradient(transparent, var(--colorWhite) 30%);
+  z-index: 50;
+}
+
+.buyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp10);
+  width: 100%;
+  max-width: var(--maxW);
+  margin: 0 auto;
+  padding: var(--sp16) var(--sp24);
+  background-color: var(--color05);
+  color: var(--colorWhite);
+  border: none;
+  border-radius: var(--radiusPill);
+  font-size: var(--fs16);
+  font-weight: var(--fwSemiBold);
+  font-family: var(--fontFamily);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.buyButton:hover {
+  background-color: var(--color01);
+}
+
+.buyButton img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* Precio actual */
+.buyBtnPrice {
+  font-weight: var(--fwBold);
+}
+
+/* Precio tachado (original) */
+.buyBtnOldPrice {
+  font-size: var(--fs13);
+  color: var(--color03);
+  text-decoration: line-through;
+  font-weight: var(--fwRegular);
+}
+
+
+/* ============================================
+   MODAL "READ MORE"
+   ============================================ */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 17, 17, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalContent {
+  background-color: var(--colorWhite);
+  border-radius: var(--radius24) var(--radius24) 0 0;
+  padding: var(--sp32) var(--sp24);
+  width: 100%;
+  max-width: var(--maxW);
+  max-height: 70vh;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.modal:target .modalContent {
+  transform: translateY(0);
+}
+
+.modalHandle {
+  width: 40px;
+  height: 4px;
+  background-color: var(--color04);
+  border-radius: 2px;
+  margin: 0 auto var(--sp20);
+}
+
+.modalTitle {
+  font-size: var(--fs20);
+  font-weight: var(--fwBold);
+  margin-bottom: var(--sp16);
+  color: var(--color01);
+}
+
+.modalText {
+  font-size: var(--fs14);
+  color: var(--color02);
+  line-height: 1.8;
+  margin-bottom: var(--sp16);
+}
+
+.modalClose {
+  display: inline-block;
+  padding: var(--sp12) var(--sp32);
+  background-color: var(--color05);
+  color: var(--colorWhite);
+  border-radius: var(--radiusPill);
+  font-size: var(--fs14);
+  font-weight: var(--fwSemiBold);
+  transition: var(--transition);
+}
+
+.modalClose:hover {
+  background-color: var(--color01);
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 768px) {
+  .detailLayout {
+    display: flex;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .productHero {
+    width: 45%;
+    max-height: none;
+    aspect-ratio: 3 / 5;
+    flex-shrink: 0;
+    border-radius: 0 0 var(--radius24) 0;
+  }
+
+  .detailPanel {
+    margin-top: 0;
+    border-radius: 0;
+    width: 55%;
+    min-height: auto;
+    padding: var(--sp40) var(--sp32);
+    padding-bottom: var(--sp32);
+  }
+
+  .topBar {
+    padding: var(--sp24) var(--sp24);
+  }
+
+  .buyButtonWrap {
+    position: relative;
+    padding: 0;
+    background: none;
+    margin-top: var(--sp20);
+  }
+}
+
+@media (min-width: 1024px) {
+  .detailLayout {
+    max-width: 1000px;
+    gap: var(--sp32);
+    padding: var(--sp40);
+  }
+
+  .productHero {
+    border-radius: var(--radius24);
+  }
+}
