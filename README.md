@@ -37,8 +37,12 @@ app_de_ecommerce_de_ropa/
 │   ├── font/
 │   │   └── encode_sans/   # Fuente tipográfica del proyecto
 │   └── img/               # Imágenes de productos y assets visuales
+│   │   └── products/
 ├── views/
 │   ├── detail.html        # Página de detalle del producto
+│   ├── detail2.html
+│   ├── detail3.html
+│   ├── detail4.html
 │   └── checkout.html      # Página del carrito de compras
 └── index.html             # Página de inicio
 ```
@@ -119,11 +123,7 @@ Este proyecto usa **Conventional Commits** para mantener un historial limpio y d
 | Tipo | Descripción |
 |------|-------------|
 | `feat` | Nueva funcionalidad o página |
-| `fix` | Corrección de errores visuales o de estructura |
-| `style` | Cambios de estilos CSS sin impacto funcional |
-| `refactor` | Reorganización de código o estructura de archivos |
-| `docs` | Cambios en documentación (como este README) |
-| `chore` | Tareas de mantenimiento o configuración |
+
 
 ### Ejemplos
 
@@ -140,7 +140,7 @@ docs: add README with project structure and setup guide
 |------|-----------|
 | `main` | Rama de presentación — solo código estable y revisado |
 | `develop` | Rama de desarrollo activo |
-| `feature/*` | Ramas por funcionalidad específica |
+
 
 ---
 
