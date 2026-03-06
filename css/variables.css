@@ -41,6 +41,7 @@
   --colorBorder: #E5E5E5;      /* Bordes sutiles */
   --colorBg: #FAFAFA;          /* Fondo general de la app */
   --colorVisa: #1A1F71;        /* Azul Visa */
+  --colorBlue: #0000FF;        /*Azul Reseñas*/
 
   /* --- Tipografía --- */
   --fontFamily: 'Encode Sans', 'Segoe UI', sans-serif;
