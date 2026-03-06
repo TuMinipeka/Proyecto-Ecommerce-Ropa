@@ -42,14 +42,14 @@ img {
   z-index: 10;
 }
 
-.topBarBtn:hover {
+.topBarBtnF:hover {
   transform: translateY(-2px);
   content: url("../storage/img/icons/heart.png");
   border-radius: 50%;
 }
 
 /* Botón circular transparente con ícono */
-.topBarBtn {
+.topBarBtnF, .topBarBtnV {
   width: 40px;
   height: 40px;
   border-radius: var(--radiusFull);
@@ -64,7 +64,7 @@ img {
   backdrop-filter: blur(4px);
 }
 
-.topBarBtn img {
+.topBarBtnV img, .topBarBtnF img{
   width: 25px;
   height: 25px;
 }
@@ -262,7 +262,7 @@ img {
 
 .sizeOption:hover {
   border-color: var(--color01);
-  color: var(--color01);
+  color: var(--color03);
 }
 
 /* Talla seleccionada = fondo oscuro, texto blanco */
