@@ -400,6 +400,7 @@ img {
   background-color: var(--colorWhite);
   border-radius: var(--radius24) var(--radius24) 0 0;
   padding: var(--sp32) var(--sp24);
+  text-align: center;
   width: 100%;
   max-width: var(--maxW);
   max-height: 70vh;
