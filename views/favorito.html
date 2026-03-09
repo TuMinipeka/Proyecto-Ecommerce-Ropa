@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleVibe - E-commerce de Ropa</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="storage/img/icono.jpg">
+</head>
+<body>
+
+  <div class="appContainer">
+    <header class="header">
+      <div class="headerGreeting">
+        <span class="greetingLabel">Hello, Welcome 👋</span>
+        <h1 class="greetingName">Cristian Mayorga</h1>
+      </div>
+
+      <!-- IMAGEN LOCAL: storage/img/avatars/avatar.jpg -->
+      <div class="profileAvatar">
+        <img src="../storage/img/perfilfoto.jpg" alt="Daniel Mayorga">
+      </div>
+    </header>
+
+
+
+    <div class="categoriesScroll">
+      <!-- Chip activo = fondo #121111 -->
+      <a href="#" class="categoryChip categoryChip--active">
+        <!-- ÍCONO: storage/img/icons/category-all.svg -->
+        <img src="../storage/img/icons/cuadritos.png" alt="">
+        All Items
+      </a>
+
+      <a href="#" class="categoryChip">
+        <!-- ÍCONO: storage/img/icons/category-dress.svg -->
+        <img src="../storage/img/icons/dress.png" alt="dress">
+        Dress
+      </a>
+
+      <a href="#" class="categoryChip">
+        <img src="../storage/img/icons/shirt.png" alt="shirt">
+        T-Shirt
+      </a>
+
+      <a href="#" class="categoryChip">
+        <img src="../storage/img/icons/pants.png" alt="pants">
+        Pants
+      </a>
+    </div>
+
+
+    <!-- ============================================
+         GRID DE PRODUCTOS
+         Figma: 2 columnas, 4 productos visibles
+         ============================================ -->
+    <div class="productsGrid">
+
+      <!-- ========== PRODUCTO 1 ========== -->
+      <a href="../views/detail.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="../storage/img/products/Product1.png"
+            alt="Modern Light Clothes"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="../storage/img/icons/coralleno.png" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Modern Light Clothes</h3>
+          <p class="productCategory">T-Shirt</p>
+          <div class="productMeta">
+            <span class="productPrice">$212.99</span>
+            <span class="productRating">
+              <img src="../storage/img/icons/start.png" alt="★">
+              5.0
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 2 ========== -->
+      <!-- Figma: "Light Dress Bless" / Dress modern / $162.99 / ★ 5.0 -->
+      <a href="../views/detail2.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="../storage/img/products/Product2.png"
+            alt="Light Dress Bless"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="../storage/img/icons/coralleno.png" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Light Dress Bless</h3>
+          <p class="productCategory">Dress modern</p>
+          <div class="productMeta">
+            <span class="productPrice">$169.99</span>
+            <span class="productRating">
+              <img src="../storage/img/icons/start.png" alt="★">
+              5.0
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 3 ========== -->
+      <a href="../views/detail3.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="../storage/img/products/Product3.png"
+            alt="Modern Light Clothes"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="../storage/img/icons/coralleno.png" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Modern Light Clothes</h3>
+          <p class="productCategory">Dress modern</p>
+          <div class="productMeta">
+            <span class="productPrice">139.99</span>
+            <span class="productRating">
+              <img src="../storage/img/icons/start.png" alt="★">
+              4.9
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ========== PRODUCTO 4 ========== -->
+      <a href="../views/detail4.html" class="productCard">
+        <div class="productImageWrap">
+          <img
+            src="../storage/img/products/Product4.png"
+            alt="Elegant Style"
+            class="productImage"
+          >
+          <span class="favoriteBtn">
+            <img src="../storage/img/icons/coralleno.png" alt="">
+          </span>
+        </div>
+        <div class="productInfo">
+          <h3 class="productTitle">Elegant Style</h3>
+          <p class="productCategory">T-Shirt</p>
+          <div class="productMeta">
+            <span class="productPrice">$190.99</span>
+            <span class="productRating">
+              <img src="../storage/img/icons/start.png" alt="★">
+              5.0
+            </span>
+          </div>
+        </div>
+      </a>
+
+
+  <nav class="navbarMobile">
+    <a href="../index.html" class="navItem navItem--active" aria-label="Inicio">
+      <!-- ÍCONO: storage/img/icons/nav-home.svg -->
+      <img src="../storage/img/icons/home.png" alt="Home">
+    </a>
+
+    <a href="../views/checkout.html" class="navItem" aria-label="Carrito">
+      <img src="../storage/img/icons/bag.png" alt="Bag">
+    </a>
+
+    <a href="#" class="navItem" aria-label="Favoritos">
+      <img src="../storage/img/icons/coralleno.png" alt="Favorites">
+    </a>
+
+    <a href="#" class="navItem" aria-label="Perfil">
+      <img src="../storage/img/icons/profile.png" alt="Profile">
+    </a>
+
+    <a href="../views/comentario.html" class="navItem" aria-label="Comentarios">
+        <img src="../storage/img/icons/comentario2.png" alt="Comentarios">
+      </a>
+
+  </nav>
+
+  
+
+</body>
+</html>

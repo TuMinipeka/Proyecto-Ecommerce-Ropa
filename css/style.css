@@ -166,13 +166,6 @@ button {
 }
 
 
-/* ============================================
-   CATEGORÍAS
-   Figma: Chips pill con ícono + texto.
-   Chip activo = fondo oscuro #121111, texto blanco.
-   Chips inactivos = fondo #F2F2F2, texto oscuro.
-   ============================================ */
-
 .categoriesScroll {
   display: flex;
   gap: var(--sp10);
@@ -221,11 +214,6 @@ button {
 }
 
 
-/* ============================================
-   GRID DE PRODUCTOS
-   Figma: 2 columnas, tarjetas con imagen grande,
-   bordes redondeados, info debajo.
-   ============================================ */
 
 .productsGrid {
   display: grid;
@@ -233,10 +221,6 @@ button {
   gap: var(--sp16);
 }
 
-
-/* ============================================
-   TARJETA DE PRODUCTO
-   ============================================ */
 
 .productCard {
   display: block;
