@@ -3,146 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StyleVibe - E-commerce de Ropa</title>
   <link rel="stylesheet" href="../css/variables.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="storage/img/icono.jpg">
+  <link rel="stylesheet" href="../css/comentario.css">
+  <title>Comentarios</title>
 </head>
 <body>
-
-  <div class="appContainer">
-    <header class="header">
-      <div class="headerGreeting">
-
-        <h1 class="greetingName">Reseñas</h1>
-      </div>
-
-      <!-- IMAGEN LOCAL: storage/img/avatars/avatar.jpg -->
-      <div class="profileAvatar">
-        <img src="../storage/img/perfilfoto.jpg" alt="Daniel Mayorga">
-      </div>
-    </header>
-
-
-    <!-- ============================================
-         GRID DE PRODUCTOS
-         Figma: 2 columnas, 4 productos visibles
-         ============================================ -->
-    <div class="productsGrid">
-
-      <!-- ========== PRODUCTO 1 ========== -->
-      <a href="../views/detail.html" class="productCard">
-        <div class="productImageWrap">
-          <img
-            src="../storage/img/products/Product1.png"
-            alt="Modern Light Clothes"
-            class="productImage"
-          >
-          <span class="favoriteBtn">
-            <img src="../storage/img/icons/coralleno.png" alt="">
-          </span>
-        </div>
-        <div class="productInfo">
-            <h3 class="productTitle">Comentarios: </h3>
-            <p>
-                  Encantada con esta tienda.
-                  Ropa muy bonita y de calidad.
-                  Atención inmejorable! 
-                  Da gusto ir a comprar.</p>
-          <div class="productMeta">
-          </div>
-        </div>
+  <div class="general">
+    <nav class="upContent">
+      <a class="upContentLogo" href="comentario.html">
+        <img src="../storage/img/icons/logoTienda.png" alt="">
       </a>
-
-      <!-- ========== PRODUCTO 2 ========== -->
-      <!-- Figma: "Light Dress Bless" / Dress modern / $162.99 / ★ 5.0 -->
-      <a href="../views/detail2.html" class="productCard">
-        <div class="productImageWrap">
-          <img
-            src="../storage/img/products/Product2.png"
-            alt="Light Dress Bless"
-            class="productImage"
-          >
-          <span class="favoriteBtn">
-            <img src="../storage/img/icons/coralleno.png" alt="">
-          </span>
-        </div>
-        <div class="productInfo">
-            <h3 class="productTitle">Comentarios: </h3>
-            <p>El producto correcto segun la descripcion y una atencion al cliente extraordinaria. Muchas gracias por todo😊</p>
-          <div class="productMeta">
-          </div>
-        </div>
+      <a class="upContentInicio" href="../index.html">Inicio
+        <img src="../storage/img/icons/home2.png" alt="inicio">
       </a>
-
-      <!-- ========== PRODUCTO 3 ========== -->
-      <a href="../views/detail3.html" class="productCard">
-        <div class="productImageWrap">
-          <img
-            src="../storage/img/products/Product3.png"
-            alt="Modern Light Clothes"
-            class="productImage"
-          >
-          <span class="favoriteBtn">
-            <img src="../storage/img/icons/coralleno.png" alt="">
-          </span>
-        </div>
-        <div class="productInfo">
-            <h3 class="productTitle">Comentarios: </h3>
-            <p>El vestido sienta genial, yo tengo una 38/M y queda precioso, me ha encantado.
-                Recomiendo esta tienda 100% calidad y precio, el personal super atento, yo siempre compro online, y nunca he tenido problema con el pedido ni con las devoluciones, aunque solo he hecho una devolución, casi un año ya enganchada a los directos online de Facebook.
-                Gracias siempre por la atención del personal de tienda.</p>
-          <div class="productMeta">
-          </div>
-        </div>
+      <a class="upContentFavorito" href="favorito.html">Favoritos
+        <img src="../storage/img/icons/corazon.png" alt="favoritos">
       </a>
-
-      <!-- ========== PRODUCTO 4 ========== -->
-      <a href="../views/detail4.html" class="productCard">
-        <div class="productImageWrap">
-          <img
-            src="../storage/img/products/Product4.png"
-            alt="Elegant Style"
-            class="productImage"
-          >
-          <span class="favoriteBtn">
-            <img src="../storage/img/icons/coralleno.png" alt="">
-          </span>
-        </div>
-        <div class="productInfo">
-            <h3 class="productTitle">Comentarios: </h3>
-            <p>Maravillosa tienda, estoy súper feliz con la compra y el detalle de regalo, ha venido el pedido justo cuando estaba de bajón y ha sido mi terapia Preciosa. Gracias</p>
-          <div class="productMeta">
-          </div>
-        </div>
+      <search class="upContentLupa">
+        <input placeholder="Search..." type="search">
+      </search>
+      <img class="upContentPerfil" src="../storage/img/perfilfoto.jpg" alt="fotoPerfil">
+      <a class="upContentColombia" href="https://es.wikipedia.org/wiki/Colombia">
+        <img  class="upContentColombia" src="../storage/img/icons/colombia.png" alt="idioma">
       </a>
-
-
-  <nav class="navbarMobile">
-    <a href="../index.html" class="navItem navItem--active" aria-label="Inicio">
-      <!-- ÍCONO: storage/img/icons/nav-home.svg -->
-      <img src="../storage/img/icons/home.png" alt="Home">
-    </a>
-
-    <a href="checkout.html" class="navItem" aria-label="Carrito">
-      <img src="../storage/img/icons/bag.png" alt="Bag">
-    </a>
-
-    <a href="favorito.html" class="navItem" aria-label="Favoritos">
-      <img src="../storage/img/icons/heart.png" alt="Favorites">
-    </a>
-
-    <a href="#" class="navItem" aria-label="Perfil">
-      <img src="../storage/img/icons/profile.png" alt="Profile">
-    </a>
-
-    <a href="../views/comentario.html" class="navItem" aria-label="Comentarios">
-        <img src="../storage/img/icons/image.png" alt="Comentarios">
+      <a class="upContentPagar" href="checkout.html">
+        <img src="../storage/img/icons/carrito.png" alt="">
       </a>
+    </nav>
 
-  </nav>
+    <div class="hero">
+      <main class="hero1">
+        <div class="heroImagen">
+          <img src="../storage/img/products/elegante.jpg" alt="producto">
+        </div>
+        <div class="heroContent">
+          <p> Ropa de calidad, con tela ultra suave, alta textura y sello de calidad 
+            donde disño y elegancia son 1, todo hecho 100% recogido por los 
+            mejores artesanos de Colombia y hecho con demasiado amor.
+            </p>
+        </div>
+        <div class="heroContentPrice">
+          <h2>ULTIMO DIA 14.999</h2>
+          <p>despues de la promocion a 30k</p>
+          <p>3,7+ ventas | vendidos por <img src="../storage/img/icono.jpg" alt="icon"></p>
+        </div>
+        <div class="heroContentCompra">
+          <button class="heroButton">Añadir al carrito</button>
+        </div>
+      </main>
+    </div>
+    <article class="comentarios"> 
+      <article class="comentario1">
+        <img class="img" src="../storage/img/icons/perfilicon.png" alt="usuario">
+        <p> Daniel Mayorga </p>
+        <p>tal cual como en la descripción, suenan bien, tal vez lo único mejor es mejorar los bajos, pero por el precio es perfecto
+        </p>
+      </article>
+      <article class="comentario2">
+        <img class="img" src="../storage/img/icons/perfilicon.png" alt="usuario">
+        <p> Sebastian Salas </p>
+        <p>Muy buen producto pero sería mejor que fuera un poco más gruesa la tela
+        </p>
+      </article>
+      <article class="comentario3">
+        <img class="img" src="../storage/img/icons/perfilicon.png" alt="usuario">
+        <p> Diego panqueda </p>
+        <p>¡Muy chulo! La cremallera es un poco frágil, pero no afecta mucho a la calidad de la prenda
+        </p>
+      </article>
+      <article class="comentario4">
+        <img class="img" src="../storage/img/icons/perfilicon.png" alt="usuario">
+        <p> leonardo pajin </p>
+        <p>muy buen material Delgado abrigado presentación linda me gustó
+        </p>
+      </article>
+    </article>
 
-  
-
+  </div>
 </body>
 </html>
